@@ -16,7 +16,7 @@ function App() {
           let consumerIp;
           await axios({
             method: 'post',
-            url: 'http://paysafetestapi-env.eba-axpyvpje.us-east-2.elasticbeanstalk.com/token',
+            url: 'https://paysafe-ui.herokuapp.com/token',
             data: {
                     email: email,
                     firstName: name,
@@ -80,7 +80,7 @@ function App() {
                   result["custId"] = id;
                   axios({
                     method: 'post',
-                    url: 'http://paysafetestapi-env.eba-axpyvpje.us-east-2.elasticbeanstalk.com/payment',
+                    url: 'https://paysafe-ui.herokuapp.com/payment',
                     data: result
                 })
                 .then((result) => {
