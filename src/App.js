@@ -13,7 +13,6 @@ function App() {
           let token;
           let id;
           let merchantRefNum;
-          let consumerIp;
           await axios({
             method: 'post',
             url: 'https://paysafe-ui.herokuapp.com/token',
@@ -28,7 +27,6 @@ function App() {
             token = response.data.singleUseCustomerToken
             id = response.data.customerId
             merchantRefNum = response.data.merchantRefNum
-            consumerIp = response.data.consumerIp
         }).catch((error) => {
             console.log(error)
         })
